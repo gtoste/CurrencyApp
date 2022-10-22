@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChartActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="32dp"
+        android:textSize="24sp"
+        android:text="@string/title_chart"
+        android:textStyle="bold|italic"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+        />
+
+    <LinearLayout
+        android:id="@+id/input"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="-24dp"
+        android:padding="6dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/rounded_background"
+        >
+
+        <Spinner
+            android:id="@+id/base_spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"/>
+
+        <Spinner
+            android:id="@+id/currency_spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/input"
+        >
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="3dp"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:text="@string/day"
+            />
+        <TextView
+            android:id="@+id/week"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="3dp"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:text="@string/week"
+            />
+        <TextView
+            android:id="@+id/month"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="3dp"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:text="@string/month"
+            />
+        <TextView
+            android:id="@+id/month_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="3dp"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:text="@string/month_3"
+            />
+        <TextView
+            android:id="@+id/month_6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="3dp"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:text="@string/month_6"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/chart_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/dates">
+
+        <Button
+            android:id="@+id/btn_linear"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd ="5dp"
+            android:text="@string/linear"
+            />
+        <Button
+            android:id="@+id/btn_column"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd ="10dp"
+            android:text="@string/column"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/chart_type"
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_changeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="12dp"
+        android:src="@drawable/ic_baseline_price_change_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+</RelativeLayout>
